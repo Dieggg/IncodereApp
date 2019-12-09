@@ -19,10 +19,10 @@
                       
                       
                       
-        Title="Aplicación Incodere V.001" Height="700" Width="550"  Visibility="Visible" TouchEnter="MetroWindow_TouchEnter" AllowsTransparency="True" Opacity="0.9"
+        Title="Aplicación Incodere V.001" Height="550" Width="450"  Visibility="Visible" TouchEnter="MetroWindow_TouchEnter" AllowsTransparency="True" Opacity="0.9"
                       BorderThickness="0" 
                       GlowBrush="Black"
-                      ResizeMode="CanResizeWithGrip"
+                      ResizeMode="NoResize"
 
                       WindowTransitionsEnabled="False"
                       WindowStartupLocation="CenterScreen"
@@ -49,16 +49,16 @@
                         </Grid>
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 40">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 0">
                         <materialDesign:PackIcon Kind="Account" Foreground="{Binding ElementName=txt_usuario, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 " Height="29" Width="37"/>
                         <TextBox x:Name="txtUsuario" Width="300"  materialDesign:HintAssist.Hint="Usuario" FontSize="16"
                                   materialDesign:HintAssist.Foreground="Black"  materialDesign:HintAssist.IsFloating="True" TouchEnter="TxtUsuario_TouchEnter"/>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 10 0 70" HorizontalAlignment="Center">
                         <materialDesign:PackIcon Kind="Key" Foreground="{Binding ElementName=txt_contrasena, Path=BorderBrush}" VerticalAlignment="Bottom" Margin="0 4" Height="29" Width="37"/>
                         <PasswordBox x:Name="txtContrasena" Width="300"  materialDesign:HintAssist.Hint="Contraseña" materialDesign:HintAssist.Foreground="Black"  materialDesign:HintAssist.IsFloating="True" SelectionBrush="Aqua" FontSize="16"/>
                     </StackPanel>
-                    <CheckBox Content="Recordar contraseña" Margin="0 30" HorizontalAlignment="Center" />
+                    
 
                     <Button Style="{DynamicResource MaterialDesignRaisedAccentButton}"  Content="Iniciar sesion" Width="120" HorizontalAlignment="Center" Margin="0 20" Background="Orange" BorderBrush="Orange" Click="Button_Click_1"/>
 
