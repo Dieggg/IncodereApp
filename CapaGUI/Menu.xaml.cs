@@ -78,7 +78,7 @@ namespace CapaGUI
 
         private void Button_Click_IngresarGuia(object sender, RoutedEventArgs e)
         {
-            CrearGuia _ver = new CrearGuia();
+            IGProveedor _ver = new IGProveedor();
             this.Close();
             _ver.ShowDialog();
 

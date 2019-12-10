@@ -18,36 +18,37 @@
         xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="CrearGuia" Height="700" Width="550">
+        Title="CrearGuia" Height="680" Width="700" WindowStartupLocation="CenterScreen">
     <Grid>
         <Image Source="Imagenes/bc1.jpg" Stretch="UniformToFill" Opacity="10">
         </Image>
 
         <StackPanel Orientation="Vertical">
-            <Label FontWeight="Bold" FontSize="16" Background="#FF595959" Foreground="#DDFFFFFF" Margin="20 10 0 0" Content="INGRESO GUÍA DE DESPACHO"/>
-            <StackPanel Orientation="Horizontal" Margin="30,0,0,0">
-
-                <Label Content="Numero de guia:" Margin="0 30 0 10"></Label>
-                <TextBox  VerticalAlignment="top" Margin="10 30 0 10" Width="100" HorizontalAlignment="Left"   />
+            <Label FontWeight="Bold" FontSize="16" Background="#FF595959" Foreground="#DDFFFFFF" Margin="20 10 0 0" Content="1.2 INGRESO GUÍA DE DESPACHO - Materiales"/>
+            <StackPanel Orientation="Horizontal" Margin="30,0,0,0"/>
 
 
 
+
+            <StackPanel Orientation="Horizontal"  Margin="30,20,0,0" >
+                <Label Content="PROVEEDOR:" Margin="0 0 0 5"></Label>
+                <Label Content="[NOMBRE PROVEEDOR]" VerticalAlignment="top" Margin="0 0 0 0"  ></Label>
+                <Label Content="RUT:" Margin="0 0 0 5"></Label>
+                <Label Content="[RUT PROVEEDOR]" VerticalAlignment="top" Margin="0 0 0 0"  ></Label>
+          
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal"  Margin="30,0,0,0">
+                <Label Content="GIRO:" Margin="0 0 0 5"></Label>
+                <Label Content="[GIRO PROVEEDOR]" VerticalAlignment="top" Margin="0 0 0 0"  ></Label>
+                <Label Content="DIRECCIÓN:" Margin="0 0 0 5"></Label>
+                <Label Content="[DIRECCION PROVEEDOR]" VerticalAlignment="top" Margin="0 0 0 0"  ></Label>
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal"  Margin="30 20,0,0">
+                <Label Content="2. Favor ingresar materiales recepcionados:" VerticalAlignment="top" Margin="0 0 0 0" FontWeight="Bold"></Label>
 
             </StackPanel>
-
-
-
-
-            <StackPanel Orientation="Horizontal"  Margin="30,0,0,0" >
-                <Label Content="Proveedor:" Margin="0 0 0 10"></Label>
-                <TextBox  VerticalAlignment="top" Margin="48 0 0 10" Width="250" HorizontalAlignment="Left"></TextBox>
-            </StackPanel>
-            <StackPanel  Orientation="Horizontal">
-                <Label Content="Fecha:" Margin="30 0 0 10"></Label>
-                <DatePicker VerticalAlignment="Stretch" Margin="77 0 0 10" Width="150" HorizontalAlignment="Left" />
-            </StackPanel>
-
-            <StackPanel  Orientation="Horizontal" Margin="0 0 0 0">
+                
+                <StackPanel  Orientation="Horizontal" Margin="0 10 0 0">
                 <Label Margin="30 0 0 0">Codigo</Label>
                 <TextBox x:Name="txtCodigo" Margin="71 0 0 0" Width="200"></TextBox>
             </StackPanel>
@@ -69,7 +70,7 @@
                 <Button x:Name="btnCargarMaterial" Click="BtnCargarMaterial_Click" >Cargar Material a listado</Button>
             </StackPanel>
             <StackPanel  Orientation="Horizontal">
-                <DataGrid x:Name="dgGuia" Height="150" Width="500" Margin="30 0 0 0" AutoGenerateColumns="True" Style="{StaticResource AzureDataGrid}">
+                <DataGrid x:Name="dgGuia" Height="130" Width="500" Foreground="DeepSkyBlue" Margin="30 0 0 0" AutoGenerateColumns="True" Style="{StaticResource AzureDataGrid}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Codigo"  IsReadOnly="True"  Binding="{Binding Path=Codigo}"/>
                         <DataGridTextColumn Header="Material "  IsReadOnly="True" Binding="{Binding Path=Material}"  />
@@ -83,7 +84,7 @@
                 <Button Margin="0 0 10 0">Guardar</Button>
                 <Button x:Name="btnIngresarGuia" Margin="0 0 10 0" Click="BtnIngresarGuia_Click">Ingresar</Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Background="DeepSkyBlue" Width="550" Height="30" VerticalAlignment="Bottom" Margin="0 10 0 0">
+            <StackPanel Orientation="Horizontal" Background="DeepSkyBlue" Height="25"  Margin="0 10 0 0">
                 <Image x:Name="imgEstado"></Image>
                 <Label x:Name="lblMensaje"></Label>
             </StackPanel>
